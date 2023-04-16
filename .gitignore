@@ -1,5 +1,5 @@
 # Binaries
-binaries/
+.binaries/
 
 # Visual Studio files and folder
 .vs/

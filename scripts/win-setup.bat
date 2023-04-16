@@ -1,5 +1,5 @@
 @echo off
 pushd %~dp0\..\
-py engine/build/setup.py
+py scripts/setup.py
 popd
-pause
+call win-gen-projects.bat

@@ -27,8 +27,8 @@ def extract_zip(filepath, destination):
 def install_premake():
     premake_version = "5.0.0-beta2"
     premake_zip_url = f"https://github.com/premake/premake-core/releases/download/v{premake_version}/premake-{premake_version}-windows.zip"
-    premake_win64_dir = "./engine/binaries/premake/win64"
-    premake_license_dir = "./engine/binaries/premake"
+    premake_win64_dir = "./engine/.binaries/premake/win64"
+    premake_license_dir = "./engine/.binaries/premake"
 
     premake_exe_path = Path(f"{premake_win64_dir}/premake5.exe")
     if premake_exe_path.exists():
