@@ -11,6 +11,7 @@ project 'Neon'
     
     includedirs {
         'include',
+        '%{dependency.spdlog}'
     }
 
     filter "system:windows"

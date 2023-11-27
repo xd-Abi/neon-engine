@@ -14,6 +14,10 @@ workspace "neon"
         "MultiProcessorCompile"
     }
 
+
+dependency = {}
+dependency["spdlog"] = "%{wks.location}/engine/vendor/spdlog/include"
+
 group "Core"
     include "engine/core"
 group ""

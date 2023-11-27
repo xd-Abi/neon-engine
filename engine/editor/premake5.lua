@@ -12,6 +12,7 @@ project 'Editor'
     includedirs {
         'include',
         '%{wks.location}/engine/core/include',
+        '%{dependency.spdlog}'
     }
 
     links {
