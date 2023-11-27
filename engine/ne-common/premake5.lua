@@ -11,6 +11,11 @@ project "ne-common"
 
     includedirs {
         'include',
+        '%{dependency.spdlog}',
+    }
+
+    links {
+        'spdlog'
     }
 
     filter 'system:windows'

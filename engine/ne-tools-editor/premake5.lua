@@ -11,6 +11,7 @@ project 'ne-tools-editor'
     
     includedirs {
         'include',
+        '%{dependency.spdlog}',
         '%{dependency.neon.application}',
         '%{dependency.neon.common}',
         '%{dependency.neon.platform}',

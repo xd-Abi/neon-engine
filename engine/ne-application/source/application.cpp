@@ -6,7 +6,9 @@ namespace Neon {
 
 	Application::Application(const ApplicationSpecification& specficiation)
 		: m_Specification(specficiation)
-	{}
+	{
+		NE_INFO("TTEST");
+	}
 
 	Application::~Application()
 	{}

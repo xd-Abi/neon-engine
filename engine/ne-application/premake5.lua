@@ -11,6 +11,7 @@ project "ne-application"
 
     includedirs {
         'include',
+        '%{dependency.spdlog}',
         '%{dependency.neon.common}',
         '%{dependency.neon.platform}',
     }
