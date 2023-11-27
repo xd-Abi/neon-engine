@@ -10,6 +10,10 @@ workspace "neon"
         "Dist"
     }
 
+	platforms {
+		'Win64'
+	}
+
     flags {
         "MultiProcessorCompile"
     }

@@ -14,6 +14,9 @@ project 'Neon'
         '%{dependency.spdlog}'
     }
 
+	filter 'platforms:Win64'
+		defines 'NE_PLATFORM_WINDOWS'
+
     filter "system:windows"
         systemversion "latest"
 

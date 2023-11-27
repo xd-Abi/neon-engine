@@ -6,4 +6,5 @@ int main(int argc, char** argv)
 {
 	Neon::Log::Init();
 	NE_INFO("Initializing neon engine...");
+	NE_ASSERT(false, "Failed to test...");
 }
