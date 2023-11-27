@@ -1,5 +1,10 @@
 #pragma once
 
+#include <stdint.h>
+#include <memory>
+#include <string>
+
+
 /* These are basic types and are supported by almost every compiler and platform */
 
 /* Unsigned base types */
@@ -24,5 +29,25 @@ typedef uint8				char8;
 typedef uint16				char16;
 typedef uint32				char32;
 
-#include <stdint.h>
 typedef size_t size;
+
+namespace Neon {
+
+	template <typename T>
+	using Unique = std::unique_ptr<T>;
+	template <typename T, typename... Args>
+	constexpr Unique<T> MakeUnique(Args&&... args)
+	{
+		return std::make_unique<T>(std::forward<Args>(args)...);
+	}
+
+	template <typename T>
+	using Ref = std::shared_ptr<T>;
+	template <typename T, typename... Args>
+	constexpr Ref<T> MakeRef(Args&&... args)
+	{
+		return std::make_shared<T>(std::forward<Args>(args)...);
+	}
+
+	using String = std::string;
+}
