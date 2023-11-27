@@ -1,6 +1,12 @@
-#include <neon/application/application.h>
+#include <neon/entry.h>
 
-int main() {
-	App();
-	Log("Hello from Editor");
+namespace Neon {
+
+	Application* CreateApp()
+	{
+		ApplicationSpecification spec;
+		spec.Name = "Neon Engine";
+
+		return new Application(spec);
+	}
 }
