@@ -5,5 +5,5 @@
 int main(int argc, char** argv)
 {
 	Neon::Log::Init();
-	Neon::Log::GetCoreLogger()->info("Welcome to Neon!");
+	NE_INFO("Initializing neon engine...");
 }

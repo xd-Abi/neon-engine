@@ -23,3 +23,10 @@ namespace Neon {
 		static Ref<spdlog::logger> s_CoreLogger;
 	};
 }
+
+/* Macros for the core logger */
+#define NE_TRACE(...)		::Neon::Log::GetCoreLogger()->trace(__VA_ARGS__)
+#define NE_INFO(...)		::Neon::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define NE_WARN(...)		::Neon::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define NE_ERROR(...)		::Neon::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define NE_CRITICAL(...)		::Neon::Log::GetCoreLogger()->critical(__VA_ARGS__)
