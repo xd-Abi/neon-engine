@@ -1,4 +1,4 @@
-project 'Editor'
+project 'ne-tools-editor'
     kind 'ConsoleApp'
     language 'C++'
     cppdialect 'C++17'
@@ -11,12 +11,13 @@ project 'Editor'
     
     includedirs {
         'include',
-        '%{wks.location}/engine/core/include',
-        '%{dependency.spdlog}'
+        '%{dependency.neon.application}',
+        '%{dependency.neon.common}',
+        '%{dependency.neon.platform}',
     }
 
     links {
-        "Neon"
+        'ne-application',
     }
 
 	filter 'platforms:Win64'
