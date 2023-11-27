@@ -1,7 +1,7 @@
 workspace "neon"
     architecture "x86_64"
-    objdir "%{wks.location}/engine/.binaries/%{prj.name}/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
-    targetdir "%{wks.location}/engine/.binaries/%{prj.name}/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+    objdir "%{wks.location}/.bin/%{prj.name}/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+    targetdir "%{wks.location}/.bin/%{prj.name}/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
     startproject "Editor"
 
     configurations {
