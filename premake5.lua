@@ -1,13 +1,13 @@
-workspace "neon"
-    architecture "x86_64"
-    objdir "%{wks.location}/.bin/%{prj.name}/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
-    targetdir "%{wks.location}/.bin/%{prj.name}/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
-    startproject "Editor"
+workspace 'neon'
+    architecture 'x86_64'
+    objdir '%{wks.location}/.bin/%{prj.name}/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}'
+    targetdir '%{wks.location}/.bin/%{prj.name}/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}'
+    startproject 'Editor'
 
     configurations {
-        "Debug",
-        "Release",
-        "Dist"
+        'Debug',
+        'Release',
+        'Dist'
     }
 
 	platforms {
@@ -15,17 +15,22 @@ workspace "neon"
 	}
 
     flags {
-        "MultiProcessorCompile"
+        'MultiProcessorCompile'
     }
 
 
 dependency = {}
-dependency["spdlog"] = "%{wks.location}/engine/vendor/spdlog/include"
+dependency['glfw'] = '%{wks.location}/engine/vendor/glfw/include'
+dependency['spdlog'] = '%{wks.location}/engine/vendor/spdlog/include'
 
-group "Core"
-    include "engine/core"
-group ""
+group 'Core'
+    include 'engine/core'
+group ''
 
-group "Tools"
-    include "engine/editor"
-group ""
+group 'Tools'
+    include 'engine/editor'
+group ''
+
+group 'Dependencies'
+    include 'engine/vendor'
+group ''
