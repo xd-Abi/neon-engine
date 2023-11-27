@@ -4,5 +4,6 @@
 
 int main(int argc, char** argv)
 {
-	Neon::Welcome();
+	Neon::Log::Init();
+	Neon::Log::GetCoreLogger()->info("Welcome to Neon!");
 }

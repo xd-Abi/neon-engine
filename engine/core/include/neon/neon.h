@@ -1,6 +1,3 @@
 #pragma once
 
-namespace Neon {
-
-	void Welcome();
-}
+#include <neon/core/log.h>

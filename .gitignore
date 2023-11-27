@@ -1,6 +1,9 @@
 # Binaries
 .bin/
 
+# Logs
+**.log
+
 # Visual Studio files and folder
 .vs/
 **.sln
